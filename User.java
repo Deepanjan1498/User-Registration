@@ -15,10 +15,11 @@ public class User {
 		Password.add("asdfghjkl");
 		Password.add("15@1234568579");
 		Password.add("15 0234568579");
-		Password.add("ab312345685793");
+		Password.add("abcderfgth");
+		Password.add("b3123SD45685793");
 		
 
-		String regex = "^[~!@#$%^&*()+=\\w\\d.]{8,}+$";
+		String regex = "^(?=.*?[A-Z])[~!@#$%^&*()+=\\w\\d.]{8,20}$";
 
 		Pattern pattern = Pattern.compile(regex);
 
