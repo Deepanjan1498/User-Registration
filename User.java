@@ -5,25 +5,25 @@ import java.util.regex.Pattern;
 public class User {
 
 	public static void main(String[] args) {
-		List<String> Mobile = new ArrayList<String>();
+		List<String> Password = new ArrayList<String>();
 
-		Mobile.add("456789");
-		Mobile.add("91 7896354128");
-		Mobile.add("00 1234567896");
-		Mobile.add("103 2314569875");
-		Mobile.add("1 1234567895");
-		Mobile.add("15 12345685");
-		Mobile.add("15  1234568579");
-		Mobile.add("15 0234568579");
-		Mobile.add("15 12345685793");
+		Password.add("456789");
+		Password.add("@#$%2345");
+		Password.add("AsDfGhJkl");
+		Password.add("!@#$%^&*()");
+		Password.add("--");
+		Password.add("asdfghjkl");
+		Password.add("15@1234568579");
+		Password.add("15 0234568579");
+		Password.add("ab312345685793");
 		
 
-		String regex = "^([1-9][0-9]{1,2}) ([1-9][0-9]{9})$";
+		String regex = "^[~!@#$%^&*()+=\\w\\d.]{8,}+$";
 
 		Pattern pattern = Pattern.compile(regex);
 
-		for (String number : Mobile) {
-			Matcher matcher = pattern.matcher(number);
+		for (String pass : Password) {
+			Matcher matcher = pattern.matcher(pass);
 			System.out.println(matcher.matches());
 		}
 	}
