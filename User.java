@@ -5,17 +5,37 @@ import java.util.regex.Pattern;
 public class User {
 
 	public static void main(String[] args) {
-		List<String> lastName = new ArrayList<String>();
+		List<String> EmailId = new ArrayList<String>();
 
-		lastName.add("Sharma");
-		lastName.add("sharMa");
-		lastName.add("2sm");
-		String regex = "^[A-Z]{1}+[a-zA-Z]{3,}$";
+		EmailId.add("abc@yahoo.com");
+		EmailId.add("abc-100@yahoo.com");
+		EmailId.add("abc.100@yahoo.com");
+		EmailId.add("abc111@abc.com");
+		EmailId.add("abc-100@abc.net");
+		EmailId.add("abc.100@abc.com.au");
+		EmailId.add("abc@1.com");
+		EmailId.add("abc@gmial.com.com");
+		EmailId.add("abc+100@gmail.com");
+		EmailId.add("abc-");
+		EmailId.add(".abc@.com.my");
+		EmailId.add("abc123@gmail.a");
+		EmailId.add("abc123@.com");
+		EmailId.add("abc123@.com.com");
+		EmailId.add(".abc@abc.com");
+		EmailId.add("abc()*@gmail.com");
+		EmailId.add("abc@%*.com");
+		EmailId.add("abc..2002@gmail.com");
+		EmailId.add("abc.@gmail.com");
+		EmailId.add("abc@abc@gmail.com");
+		EmailId.add("abc@gmail.com.1a");
+		EmailId.add("abc@gmail.com.au.au");
+
+		String regex = "^([a-z0-9-\\+]+)(\\.[a-z0-9]+)?@([a-z0-9-]+)\\.([a-z]{2,3})(\\.[a-z]{1,3})?$";
 
 		Pattern pattern = Pattern.compile(regex);
 
-		for (String last : lastName) {
-			Matcher matcher = pattern.matcher(last);
+		for (String email : EmailId) {
+			Matcher matcher = pattern.matcher(email);
 			System.out.println(matcher.matches());
 		}
 	}
