@@ -5,37 +5,25 @@ import java.util.regex.Pattern;
 public class User {
 
 	public static void main(String[] args) {
-		List<String> EmailId = new ArrayList<String>();
+		List<String> Mobile = new ArrayList<String>();
 
-		EmailId.add("abc@yahoo.com");
-		EmailId.add("abc-100@yahoo.com");
-		EmailId.add("abc.100@yahoo.com");
-		EmailId.add("abc111@abc.com");
-		EmailId.add("abc-100@abc.net");
-		EmailId.add("abc.100@abc.com.au");
-		EmailId.add("abc@1.com");
-		EmailId.add("abc@gmial.com.com");
-		EmailId.add("abc+100@gmail.com");
-		EmailId.add("abc-");
-		EmailId.add(".abc@.com.my");
-		EmailId.add("abc123@gmail.a");
-		EmailId.add("abc123@.com");
-		EmailId.add("abc123@.com.com");
-		EmailId.add(".abc@abc.com");
-		EmailId.add("abc()*@gmail.com");
-		EmailId.add("abc@%*.com");
-		EmailId.add("abc..2002@gmail.com");
-		EmailId.add("abc.@gmail.com");
-		EmailId.add("abc@abc@gmail.com");
-		EmailId.add("abc@gmail.com.1a");
-		EmailId.add("abc@gmail.com.au.au");
+		Mobile.add("456789");
+		Mobile.add("91 7896354128");
+		Mobile.add("00 1234567896");
+		Mobile.add("103 2314569875");
+		Mobile.add("1 1234567895");
+		Mobile.add("15 12345685");
+		Mobile.add("15  1234568579");
+		Mobile.add("15 0234568579");
+		Mobile.add("15 12345685793");
+		
 
-		String regex = "^([a-z0-9-\\+]+)(\\.[a-z0-9]+)?@([a-z0-9-]+)\\.([a-z]{2,3})(\\.[a-z]{1,3})?$";
+		String regex = "^([1-9][0-9]{1,2}) ([1-9][0-9]{9})$";
 
 		Pattern pattern = Pattern.compile(regex);
 
-		for (String email : EmailId) {
-			Matcher matcher = pattern.matcher(email);
+		for (String number : Mobile) {
+			Matcher matcher = pattern.matcher(number);
 			System.out.println(matcher.matches());
 		}
 	}
