@@ -13,13 +13,13 @@ public class User {
 		Password.add("!@#$%^&*()");
 		Password.add("--");
 		Password.add("asdfghjkl");
-		Password.add("15@1234568579");
+		Password.add("15A123456857978965412");
 		Password.add("15 0234568579");
 		Password.add("abcderfgth");
-		Password.add("b3123SD45685793");
+		Password.add("SD45685793");
 		
 
-		String regex = "^(?=.*?[A-Z])[~!@#$%^&*()+=\\w\\d.]{8,20}$";
+		String regex = "^(?=.*\\d)[~!@#$%^&*()+=\\w\\d.]{8,20}$";
 
 		Pattern pattern = Pattern.compile(regex);
 
