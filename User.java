@@ -8,8 +8,8 @@ public class User {
 		List<String> Password = new ArrayList<String>();
 
 		Password.add("456789");
-		Password.add("@#$%2345");
-		Password.add("AsDfGhJkl");
+		Password.add("@14ju2345a");
+		Password.add("AsDfGhJk@l");
 		Password.add("!@#$%^&*()");
 		Password.add("--");
 		Password.add("asdfghjkl");
@@ -19,7 +19,7 @@ public class User {
 		Password.add("SD45685793");
 		
 
-		String regex = "^(?=.*\\d)[~!@#$%^&*()+=\\w\\d.]{8,20}$";
+		String regex = "[@#$%^&*]{1}[\\w\\d]{8,20}$";
 
 		Pattern pattern = Pattern.compile(regex);
 
