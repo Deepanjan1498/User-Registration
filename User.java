@@ -18,7 +18,7 @@ public class User {
 		Mobile.add("15 12345685793");
 		
 
-		String regex = "^([1-9][0-9]{1,2}) ([1-9][0-9]{9})$";
+		String regex = "^[1-9]([0-9]{1,2})? ([1-9][0-9]{9})$";
 
 		Pattern pattern = Pattern.compile(regex);
 
