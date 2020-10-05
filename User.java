@@ -10,7 +10,7 @@ public class User {
 		lastName.add("Sharma");
 		lastName.add("sharMa");
 		lastName.add("2sm");
-		String regex = "^[A-Z]{1}+[a-zA-Z]{3,}$";
+		String regex = "^[A-Z]{1}[a-z]{2,}$";
 
 		Pattern pattern = Pattern.compile(regex);
 
